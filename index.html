@@ -22,17 +22,76 @@
         </a>
         <nav class="header-navigation">
           <ul class="header-nav-list">
-            <li>
+            <li class="header-catalog-link main-catalog">
               <a class="header-nav-link" href="./catalog.html">Каталог</a>
+
+              <ul class="popup-menu">
+                <li>
+                  <span class="popup-menu-item popup-menu-title" href="#">
+                    Новинки
+                  </span>
+                </li>
+                <li><a class="popup-menu-item" href="#">Сливочное</a></li>
+                <li><a class="popup-menu-item" href="#">Щербеты</a></li>
+                <li><a class="popup-menu-item" href="#">Фруктовый лед</a></li>
+                <li><a class="popup-menu-item" href="#">Мелорин</a></li>
+              </ul>
             </li>
-            <li><a class="header-nav-link" href="#">Доставка и оплата</a></li>
-            <li><a class="header-nav-link" href="#">О компании</a></li>
+            <li class="header-catalog-link">
+              <a class="header-nav-link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="header-catalog-link">
+              <a class="header-nav-link" href="#">О компании</a>
+            </li>
           </ul>
         </nav>
         <ul class="header-buttons-list">
-          <li class="header-button search-button"><a href="#"></a></li>
-          <li class="header-button login-button"><a href="#">Вход</a></li>
-          <li class="header-button cart-button"><a href="#">Пусто</a></li>
+          <li class="header-button search-button">
+            <a class="header-button-link searching" href="#"></a>
+            <form class="search-form" action="#">
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Крем-брюле"
+              />
+            </form>
+          </li>
+          <li class="header-button login-button">
+            <a class="header-button-link login" href="#">Вход</a>
+            <div class="login-form-wrapper">
+              <form action="#">
+                <input
+                  class="login-input"
+                  type="email"
+                  name="user-email"
+                  id="email"
+                  placeholder="email@example.com"
+                  required
+                />
+                <input
+                  class="login-input"
+                  type="password"
+                  name="user-pass"
+                  id="password"
+                  placeholder="......"
+                  required
+                />
+                <div class="login-form-buttons">
+                  <button type="submit" class="button login-submit-button">
+                    Войти
+                  </button>
+                  <div class="help-buttons">
+                    <a href="#" class="help-btn remind">Забыли пароль?</a>
+                    <a href="#" class="help-btn sign-up">Новая регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="header-button cart-button">
+            <a class="header-button-link" href="#">Пусто</a>
+          </li>
         </ul>
       </header>
       <main>
@@ -59,6 +118,11 @@
               <a class="button" href="#">Давайте оба!</a>
             </li>
           </ul>
+          <ul class="slider-controls">
+            <li class="slider-btn slider-1-btn active-slide"></li>
+            <li class="slider-btn slider-2-btn"></li>
+            <li class="slider-btn slider-3-btn"></li>
+          </ul>
         </section>
         <section class="promo container">
           <div class="promo-card raspberries-promo">
@@ -81,6 +145,11 @@
         <section class="hit-poducts container">
           <ul class="hit-list">
             <li class="hit-card">
+              <div class="hover-content">
+                <button class="button promo-button more-button">
+                  Быстрый просмотр
+                </button>
+              </div>
               <img src="./img/hit-1.png" alt="hit-1" class="hit-image" />
               <div class="hit-price">
                 <strong>310 ₽</strong>
@@ -93,6 +162,11 @@
               </p>
             </li>
             <li class="hit-card">
+              <div class="hover-content">
+                <button class="button promo-button more-button">
+                  Быстрый просмотр
+                </button>
+              </div>
               <img src="./img/hit-2.png" alt="hit-2" class="hit-image" />
               <div class="hit-price">
                 <strong>380 ₽</strong><span>/кг</span>
@@ -104,6 +178,11 @@
               </p>
             </li>
             <li class="hit-card">
+              <div class="hover-content">
+                <button class="button promo-button more-button">
+                  Быстрый просмотр
+                </button>
+              </div>
               <img src="./img/hit-3.png" alt="hit-3" class="hit-image" />
               <div class="hit-price">
                 <strong>355 ₽</strong><span>/кг</span>
@@ -115,6 +194,11 @@
               </p>
             </li>
             <li class="hit-card">
+              <div class="hover-content">
+                <button class="button promo-button more-button">
+                  Быстрый просмотр
+                </button>
+              </div>
               <img src="./img/hit-4.png" alt="hit-4" class="hit-image" />
               <div class="hit-price">
                 <strong>415 ₽</strong><span>/кг</span>
@@ -245,5 +329,38 @@
         </ul>
       </footer>
     </div>
+    <section class="feedback-modal">
+      <div class="feedback-wrapper">
+        <h3>Мы обязательно вам ответим!</h3>
+        <button class="close-button"></button>
+        <form class="feedback-modal-form" action="#">
+          <input
+            class="feedback-input"
+            type="text"
+            name="user-name"
+            id="name"
+            placeholder="Имя Фамилия"
+          />
+          <input
+            class="feedback-input"
+            type="email"
+            name="user-email"
+            id="email"
+            placeholder="email@example.com"
+          />
+          <textarea
+            class="feedback-input feedback-text"
+            name="text"
+            id="text"
+            cols="30"
+            rows="10"
+            placeholder="В свободной форме"
+          ></textarea>
+        </form>
+        <button class="button submit-button modal-submit-button">
+          Отправить
+        </button>
+      </div>
+    </section>
   </body>
 </html>
