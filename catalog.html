@@ -93,8 +93,8 @@
               </form>
             </div>
           </li>
-          <li class="header-button cart-button">
-            <a class="header-button-link" href="#">Пусто</a>
+          <li class="header-button cart-button full-cart">
+            <a class="header-button-link" href="#">2 товара</a>
           </li>
         </ul>
       </header>
@@ -115,7 +115,133 @@
         <div class="catalog-page-name container">
           <h2>Сливочное мороженое</h2>
         </div>
-        <section class="container"></section>
+        <section class="container">
+          <form class="filters-form" action="#" method="post">
+            <fieldset>
+              <legend class="filters-legend">Сортировка:</legend>
+              <select name="sorting" id="sorting">
+                <option value="popular" selected>по популярности</option>
+                <option value="inexpensive">сначала недорогие</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="fat">по жирности</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend class="filters-legend">Цена: 100 ₽ – 500 ₽</legend>
+              <div class="range-filter">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend class="filters-legend">Жирность:</legend>
+              <ul class="fat-filter-list">
+                <li>
+                  <input
+                    class="fat-radio-input"
+                    type="radio"
+                    name="fat"
+                    id="0"
+                  />
+                  <label class="fat-radio-label" for="0">0%</label>
+                </li>
+                <li>
+                  <input
+                    class="fat-radio-input"
+                    type="radio"
+                    name="fat"
+                    id="10"
+                    checked
+                  />
+                  <label class="fat-radio-label" for="10">до 10%</label>
+                </li>
+                <li>
+                  <input
+                    class="fat-radio-input"
+                    type="radio"
+                    name="fat"
+                    id="30"
+                  />
+                  <label class="fat-radio-label" for="30">до 30%</label>
+                </li>
+                <li>
+                  <input
+                    class="fat-radio-input"
+                    type="radio"
+                    name="fat"
+                    id="more"
+                  />
+                  <label class="fat-radio-label" for="more">выше 30%</label>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="filter-2-row">
+              <fieldset>
+                <legend class="filters-legend">Наполнители:</legend>
+                <ul class="filling-checkbox-list">
+                  <li>
+                    <input
+                      class="filling-check-input"
+                      type="checkbox"
+                      name="chocolate"
+                      id="choco"
+                      checked
+                    />
+                    <label class="filling-check-label" for="choco"
+                      >шоколадные</label
+                    >
+                  </li>
+                  <li>
+                    <input
+                      class="filling-check-input"
+                      type="checkbox"
+                      name="sprinkle"
+                      id="sprinkle"
+                      checked
+                    />
+                    <label class="filling-check-label" for="sprinkle"
+                      >сахарные присыпки</label
+                    >
+                  </li>
+                  <li>
+                    <input
+                      class="filling-check-input"
+                      type="checkbox"
+                      name="fruits"
+                      id="fruits"
+                    />
+                    <label class="filling-check-label" for="fruits"
+                      >фрукты</label
+                    >
+                  </li>
+                  <li>
+                    <input
+                      class="filling-check-input"
+                      type="checkbox"
+                      name="syrup"
+                      id="syrup"
+                    />
+                    <label class="filling-check-label" for="syrup"
+                      >сиропы</label
+                    >
+                  </li>
+                  <li>
+                    <input
+                      class="filling-check-input"
+                      type="checkbox"
+                      name="jams"
+                      id="jams"
+                    />
+                    <label class="filling-check-label" for="jams">джемы</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </form>
+        </section>
       </main>
       <footer class="container main-footer">
         <ul class="footer-social">

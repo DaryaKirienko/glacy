@@ -381,6 +381,15 @@ li > .popup-menu-title {
   background-image: url("./../img/cart-icon-focus.svg");
 }
 
+.full-cart.header-button a {
+  background-color: #fff;
+  color: #323232;
+}
+
+.cart-button.full-cart a::before {
+  background-image: url("./../img/full_cart.svg");
+}
+
 /* WORK-INFO */
 
 .work-info {
@@ -1146,3 +1155,215 @@ li > .popup-menu-title {
 }
 
 /* Catalog_filters */
+
+.filters-form {
+  display: flex;
+  margin-top: 29px;
+  flex-wrap: wrap;
+}
+
+.filters-form fieldset {
+  height: 56px;
+  padding: 0;
+  margin: 0;
+  margin-right: 15px;
+  border: none;
+}
+
+.filter-2-row {
+  margin-top: 14px;
+}
+
+.filters-legend {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 3px;
+  margin-left: 16px;
+}
+
+#sorting {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  border: none;
+  width: 196px;
+  height: 36px;
+  padding-left: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  appearance: none;
+  background-image: url("./../img/sort-arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 171px;
+  background-position-y: 50%;
+}
+
+#sorting:focus {
+  background: #fff;
+  color: #323232;
+  border: none;
+  outline: none;
+  background-image: url("./../img/sort_arrow_focus.svg");
+  background-repeat: no-repeat;
+  background-position-x: 171px;
+  background-position-y: 50%;
+}
+
+#sorting option {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+}
+
+.range-filter {
+  width: 218px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding-top: 17px;
+  padding-left: 21px;
+  position: relative;
+}
+
+.scale {
+  background-color: rgba(248, 247, 244, 0.5);
+  width: 176px;
+  height: 2px;
+  position: relative;
+}
+
+.bar {
+  background-color: #f8f7f4;
+  width: 60%;
+  height: 2px;
+  margin-left: 21px;
+}
+
+.toggle {
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 8px solid #fff;
+  background-color: #ababab;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min {
+  left: 32px;
+}
+
+.toggle-max {
+  left: 148px;
+}
+
+.fat-filter-list {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 9px 17px 9px 14px;
+}
+
+.fat-filter-list li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.fat-radio-input,
+.filling-check-input {
+  display: none;
+}
+
+.fat-radio-label {
+  padding-left: 33px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  position: relative;
+}
+
+.fat-radio-input + .fat-radio-label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-image: url("./../img/radio-off.svg");
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.fat-radio-input:checked + .fat-radio-label::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("./../img/radio-on.svg");
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.filling-checkbox-list {
+  margin: 0;
+  padding: 8px 19px 8px 14px;
+  list-style: none;
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.filling-check-label {
+  padding-left: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  position: relative;
+}
+
+.filling-checkbox-list li:not(:last-of-type) {
+  margin-right: 24px;
+}
+
+.filling-check-input + .filling-check-label::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("./../img/check-off.svg");
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.filling-check-input:checked + .filling-check-label::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 24px;
+  height: 20px;
+  background-image: url("./../img/check-on.svg");
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.fat-radio-input + .fat-radio-label:hover:before,
+.fat-radio-input:checked + .fat-radio-label:hover:before,
+.filling-check-input + .filling-check-label:hover::before,
+.filling-check-input:checked + .filling-check-label:hover::before {
+  opacity: 1;
+}
+
+.fat-radio-input + .fat-radio-label:disabled::before,
+.fat-radio-input:checked + .fat-radio-label:disabled::before,
+.filling-check-input + .filling-check-label:disabled::before,
+.filling-check-input:checked + .filling-check-label:disabled::before {
+  opacity: 0.4;
+}
