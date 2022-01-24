@@ -14,7 +14,7 @@ ymaps.ready(function () {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/geoposition.svg',
+            iconImageHref: './img/geoposition.svg',
             // Размеры метки.
             iconImageSize: [80, 140],
             // Смещение левого верхнего угла иконки относительно
